@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@keyframes SlideIn {
+    from {
+        transform: translateX(-150px) translateY(-100px);
+    }
+
+    to{
+        transform: 0px;
+    }
+    
+}
+
+.slidein{
+    animation: SlideIn 2s;
+}
+
+:root{
+   --ctr-bg-color: rgb(90, 45, 121);
+   --ctr-font-color: #FFF; 
+}
+
+html{
+    background-color: var(--ctr-bg-color);
+    backdrop-filter: blur(5px);
+}
+
+.navigation{
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    padding: 0px 50px;
+    overflow-x: hidden;
+}
+
+.logo{
+    background-image: url(mjolnir.png);
+    width: 65px;
+    height: 60px;
+    background-size: cover;
+}
+
+.menu{
+    display: grid;
+}
+
+.singin{
+    position: absolute;
+    right: -50px;
+    top: 0;
+    height: 100%;
+    width: 450px;
+    transform: translateX(400px);
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index: 1000;
+    transition: 1s;
+    color: var(--ctr-font-color);
+    overflow-x: hidden;
+}
+
+.singin[data-visible="true"]{
+    position: absolute;
+    right: -50px;
+    top: 0;
+    height: 90%;
+    width: 450px;
+    transform: translateX(0);
+    background-color: transparent;
+    box-shadow: 0px 0px 20px black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index: 1001;
+}
+
+.singin-title{
+    text-align: center;
+}
+
+.singin input[type="button"]{
+    position: relative;
+    left: 20%;
+    width: 50%;
+    border: 3px outset black;
+    border-radius: 10px;
+    padding: 2.5px;
+    margin: 2px;
+    background-color: #3a0246;
+    color: var(--ctr-font-color);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.singin input[type="button"]:hover{
+    position: relative;
+    left: 20%;
+    width: 50%;
+    border: 3px outset black;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 2px;
+    background-color: #3a0246;
+    color: var(--ctr-font-color);
+    cursor: pointer;
+}
+
+
+.data{
+    display: flex;
+    align-items: baseline;
+    padding: 2px 2px;
+    margin: 0px 5px;
+    
+}
+
+.data input[type="text"], input[type="password"]{
+    border: 3px outset black;
+    border-radius: 10px;
+    background-color: #3a0246;
+    color: var(--ctr-font-color);
+    transition: 0.5s;
+}
+
+.data input[type="text"]:hover, input[type="password"]:hover{
+    border: 3px outset black;
+    border-radius: 10px;
+    padding: 2px;
+    background-color: #3a0246;
+    color: var(--ctr-font-color);
+}
+
+.button{
+    z-index: 9999;
+    border: 3px outset black;
+    border-radius: 10px;
+    padding: 2.5px;
+    color: var(--ctr-font-color);
+    background-color: #3a0246;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.button:hover{
+    z-index: 9999;
+    border: 3px outset black;
+    border-radius: 10px;
+    padding: 4px;
+    color: var(--ctr-font-color);
+    background-color: #3a0246;
+    cursor: pointer;
+}
+
+.countries-main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countries{
+    display: flex;
+    width: 100%;
+    margin: 20px 50px;
+    justify-content: space-between;
+    border: 3px outset black;
+    border-radius: 10px;
+    color: var(--ctr-font-color);
+    background-color: #3a0246;
+}
+
+.countries-left-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.country-name{
+    font-size: large;
+    font-weight: 700;
+}
+
+.country-flag{
+    height: 100px;
+    width: 150px;
+    background-size: cover;
+}
+
+.country-1{
+    background-image: url(poland-flag.png);
+}
+
+.country-2{
+    background-image: url(spain-flag.png);
+}
+
+.country-3{
+    background-image: url(greece-flag.png);
+}
+
+
+.country-side{
+    text-decoration: none;
+    margin-top: 5px;
+    color: #978b8b;
+    z-index: 1000;
+}
+
+.country-side:hover{
+    font-weight: 700;
+}

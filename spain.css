@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@keyframes SlideIn {
+   from {
+       transform: translateX(-150px) translateY(-100px);
+   }
+
+   to{
+       transform: 0px;
+   }
+   
+}
+
+.slidein{
+   animation: SlideIn 2s;
+}
+
+:root{
+    --ctr-bg-color: rgb(90, 45, 121);
+    --ctr-font-color: #FFF; 
+ }
+ 
+ html{
+     background-color: var(--ctr-bg-color);
+     backdrop-filter: blur(5px);
+ }
+
+ header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    width: 100%;
+ }
+
+ .flag{
+    background-image: url(spain-flag.png);
+    background-size: cover;
+    width: 150px;
+    height: 100px;
+ }
+
+.goback{
+    text-decoration: none;
+    color: var(--ctr-font-color);
+    border-radius: 10px;
+    border: 3px outset black;
+    height: 10%;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+.goback:hover{
+    text-decoration: none;
+    color: var(--ctr-font-color);
+    border-radius: 10px;
+    border: 3px outset black;
+    height: 10%;
+    padding: 8px;
+}
+
+ .container-main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .container{
+    display: flex;
+    margin: 20px 50px;
+    height: 280px;
+    width: 90%;
+    padding: 10px 40px;
+    background-color: aqua;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px black;
+    border-radius: 10px;
+    color: var(--ctr-font-color);
+ }
+
+ .right{
+    text-align: right;
+ }
+
+ .container-photo{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-size: cover;
+ }
+
+
+ .container-photo1{
+    background-image: url(madryt-photo.webp);
+ }
+
+ .container-photo2{
+    background-image: url(barcelona-photo.jpg);
+ }
+
+ .container-photo3{
+    background-image: url(walencja-photo.jpg);
+ }
